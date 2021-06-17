@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(53, 66, 30);
+}
+
+#canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 1);
+}
+
+.gameStart {
+    height: 0;
+    overflow: hidden;
+}
+
+.gameOver {
+    position: absolute;
+    width: 800px;
+    height: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    transition: height 1.5s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+h3,
+h4,
+h4 span {
+    position: absolute;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+
+    left: 50%;
+    top: -100px;
+    transform: translate(-50%, -30%);
+    font-size: 80px;
+    transition: top 2s .5s;
+
+}
+
+h4 {
+
+    left: -200px;
+    top: 60%;
+    font-size: 40px;
+    transition: left 2s .8s;
+}
+
+h4 span {
+
+    right: -1000px;
+    top: 50%;
+    font-size: 50px;
+    transition: right 2s 2s;
+}
+
+.gameStart.active {
+    z-index: 5;
+    background: #000;
+    position: absolute;
+    width: 800px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gameOver.active {
+    height: 456px;
+}
+
+.gameOver.active h3 {
+    top: 30%;
+}
+
+.gameOver.active h4 {
+    left: 45%;
+}
+
+.gameOver.active h4 span {
+    right: -45%;
+}
+
+#start,
+#back {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background: #000;
+    color: white;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+
+}
