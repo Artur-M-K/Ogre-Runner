@@ -13,7 +13,6 @@ let gamespeed = 2;
 let gamespeed1 = 3;
 let gamespeed2 = 4.8;
 let gamespeed3 = 5.3;
-// let spacePressed = false;
 let gameStart = true;
 
 
@@ -108,9 +107,9 @@ function animate() {
         ctx.fillStyle = 'black';
         ctx.fillRect(0,0,canvas.width, canvas.height);
         handleBackground();
-        // handleLightBug();
+        handleLightBug();
         handleBackground1();
-        // handleLightBug1();
+        handleLightBug1();
         handleBackground2(); 
         ogre.update();
         ogre.draw();
@@ -128,7 +127,6 @@ function animate() {
         if (!gameStart) {
             cancelAnimationFrame(gameRun);
         }
-    
 }
 
     
@@ -144,4 +142,4 @@ startBtn.addEventListener('click', ()=> {
     gameStartDiv.classList.remove('active');
     animate();
     
-})
+});

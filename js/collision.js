@@ -26,11 +26,8 @@ function handleCollision(player, obstacles) {
     const playerX = player.x;
     const playerSZ = player.x + player.width;
     const treeX = obstacles[i].x;
-    // const treeSZ = obstacles[i].x + obstacles[i].width;
     const playerY = player.y;
-    // const treeY = obstacles[i].y;
     const treeWYS = obstacles[i].y - obstacles[i].height;
-
 
         if ((playerX + playerSZ) > (treeX+25) && (playerY > treeWYS-15) && (playerX < treeX)) {
            

@@ -37,32 +37,27 @@ function compare( a, b ) {
     return 0;
   }
 
-function createObstacle() {
-     
-                
-                if (obstaclesArray.length >= 3) {
-                    obstaclesArray.slice(0,3);
-                    obstaclesArray.sort(compare);
-                    if((obstaclesArray[0].x-obstaclesArray[1].x < 200 && obstaclesArray[0].x-obstaclesArray[1].x > -200)) {
-                        obstaclesArray[1].x += 150;
-                    }else if  ((obstaclesArray[1].x-obstaclesArray[2].x < 200 && obstaclesArray[1].x-obstaclesArray[2].x > -200 )) {
-                        obstaclesArray[2].x += 150;
-
-                    }else if(obstaclesArray[2].x-obstaclesArray[0].x < 200 && obstaclesArray[2].x-obstaclesArray[0].x > -200) {
-                        obstaclesArray[0].x =obstaclesArray[0].x - 150;
-                    }
-                    obstaclesArray.forEach(element => {
-                        element.update();
-                    });
-                    
-                }else if(obstaclesArray.length < 3){
-                    obstaclesArray.push(new Obstacle);
-                }
-
-                
-            
-            
+  for (let i = 0; i < 3; i++) {
+    obstaclesArray.push(new Obstacle);
 }
+function createObstacle() {
+    
+        obstaclesArray.sort(compare);
+            if((obstaclesArray[0].x-obstaclesArray[1].x < 200 && obstaclesArray[0].x-obstaclesArray[1].x > -200)) {
+                obstaclesArray[1].x += 120;
+            }else if  ((obstaclesArray[1].x-obstaclesArray[2].x < 200 && obstaclesArray[1].x-obstaclesArray[2].x > -200 )) {
+                obstaclesArray[2].x += 120;
+
+            }else if(obstaclesArray[2].x-obstaclesArray[0].x < 200 && obstaclesArray[2].x-obstaclesArray[0].x > -200) {
+                    obstaclesArray[0].x =obstaclesArray[0].x - 120;
+                    }
+                obstaclesArray.forEach(element => {
+                    element.update();
+            });
+
+            }   
+               
+
 
     
     

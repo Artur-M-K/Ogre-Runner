@@ -8,14 +8,14 @@ controller = {
     keyListener:function(event) {
   
       var key_state = (event.type == "keydown")?true:false;
-  
+      if(event.keyCode == 32) return false;
+
       switch(event.keyCode) {
   
         case 38:// up key
           controller.up = key_state;
         break;
         
-  
       }
   
     }
@@ -31,7 +31,6 @@ class Ogre {
         this.originalHeight = 160;
         this.width = this.originalWidth / 2.5;
         this.height = this.originalHeight / 2.5;
-        // this.weight = 1;
         this.frameX = 0;
         this.jumping = true;
     }
@@ -60,8 +59,6 @@ class Ogre {
         }
     }
     draw() {
-        // ctx.fillStyle = 'red';
-        //ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.drawImage(ogrePic, this.frameX*this.originalWidth, 0, this.originalWidth, this.originalHeight, this.x - 12, this.y - 6, this.width*2.5, this.height*2.5);
 
     }
