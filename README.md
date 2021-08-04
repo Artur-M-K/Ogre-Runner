@@ -7,6 +7,7 @@ Click on the live demo and try it yourself...
 
 Assets taken from [Craftpix.net](https://craftpix.net/)
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/80982136/128261024-bd66344b-1aad-4e3d-a42a-70fe9194f237.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/80982136/128262236-109f6078-5bd9-4d6c-968e-6136990f23e6.gif)
+
 
 
